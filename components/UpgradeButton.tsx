@@ -2,6 +2,8 @@
 import { useUser } from '@clerk/nextjs';
 import { useState } from 'react';
 const tiers = ['free', 'silver', 'gold', 'platinum'];
+import { UserPublicMetadata } from '@/types/user';
+
 
 export default function UpgradeButton() {
   const { user, isLoaded } = useUser();
@@ -17,7 +19,7 @@ export default function UpgradeButton() {
       const nextIndex = currentIndex < tiers.length - 1 ? currentIndex + 1 : 0;
       
       await user.update({
-        publicMetadata: { tier: tiers[nextIndex] }
+        publicMetadata: { tier: tiers[nextIndex] } as UserPublicMetadata
       });
       
       // Refresh to show new events
