@@ -6,9 +6,9 @@ interface HeaderProps {
 
 export default function Header({ user }: HeaderProps) {
   // Safely get the tier with proper typing
-  const userTier = user?.publicMetadata?.tier as 'free' | 'silver' | 'gold' | 'platinum' | undefined;
-  const displayTier = userTier || 'free';
-
+  // const userTier = user?.publicMetadata?.tier as 'free' | 'silver' | 'gold' | 'platinum' | undefined;
+  // const displayTier = userTier || 'free';
+      const displayTier = 'free';
   return (
     <header>
       {/* Other header content */}
