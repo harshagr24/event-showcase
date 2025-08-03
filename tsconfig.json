@@ -29,6 +29,9 @@
       "@/lib/*": [
         "lib/*"
       ]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/types/*": ["./types/*"]
     },
     "target": "ES2017"
   },

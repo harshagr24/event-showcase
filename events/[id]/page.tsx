@@ -4,7 +4,10 @@ import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import Header from '@/components/Header';
+import { EventTier } from '@/types/event';
+// app/events/page.tsx
 
+// ... rest of your page code
 interface Event {
   id: string;
   title: string;
