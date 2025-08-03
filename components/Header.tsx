@@ -1,5 +1,4 @@
-import type { User } from '@clerk/types';
-
+import type { User } from '@/types/user';
 interface HeaderProps {
   user: User | null;
 }
