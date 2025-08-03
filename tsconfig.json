@@ -28,7 +28,7 @@
       ],
       "@/lib/*": [
         "lib/*"
-      ]
+      ],
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/types/*": ["./types/*"]
