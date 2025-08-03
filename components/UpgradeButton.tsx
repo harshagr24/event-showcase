@@ -1,6 +1,6 @@
 'use client';
 import { useUser } from '@clerk/nextjs';
-
+import { useState } from 'react';
 const tiers = ['free', 'silver', 'gold', 'platinum'];
 
 export default function UpgradeButton() {
