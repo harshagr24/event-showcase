@@ -26,14 +26,16 @@ export default function Header() {
                   <p className="text-sm font-medium">
                     {user.fullName || user.emailAddresses[0]?.emailAddress}
                   </p>
-                  <span className={`text-xs px-1.5 py-0.5 rounded-full ${
-                    user.publicMetadata.tier === 'free' ? 'bg-blue-100 text-blue-800' :
-                    user.publicMetadata.tier === 'silver' ? 'bg-gray-100 text-gray-800' :
-                    user.publicMetadata.tier === 'gold' ? 'bg-yellow-100 text-yellow-800' :
-                    'bg-purple-100 text-purple-800'
-                  }`}>
-                    {user.publicMetadata.tier || 'free'}
-                  </span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                   {
+                   free: 'bg-gray-100 text-gray-800',
+    silver: 'bg-gray-300 text-gray-800',
+    gold: 'bg-yellow-100 text-yellow-800',
+    platinum: 'bg-purple-100 text-purple-800'
+  }[user.publicMetadata?.tier || 'free']
+}`}>
+  {(user.publicMetadata?.tier || 'free').toUpperCase()}
+</span>
                 </div>
               </div>
               
