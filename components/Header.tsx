@@ -1,12 +1,13 @@
-import type { User } from '@/types/user';
-interface HeaderProps {
-  user: User | null;
-}
+// import type { User } from '../types/user';
+// interface HeaderProps {
+//   user: User | null;
+// }
 
-export default function Header({ user }: HeaderProps) {
+export default function Header() {
   // Safely get the tier with proper typing
-  const userTier = user?.publicMetadata?.tier as 'free' | 'silver' | 'gold' | 'platinum' | undefined;
-  const displayTier = userTier || 'free';
+  // const userTier = user?.publicMetadata?.tier as 'free' | 'silver' | 'gold' | 'platinum' | undefined;
+  // const displayTier = userTier || 'free';
+  const displayTier = 'free';
       
   return (
     <header>
